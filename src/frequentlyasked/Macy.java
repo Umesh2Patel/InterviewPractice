@@ -1,5 +1,4 @@
-
-//package whatever; // don't place package name!
+package frequentlyasked;
 
 import java.io.*;
 import java.util.HashMap;
