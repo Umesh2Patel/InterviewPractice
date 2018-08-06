@@ -25,7 +25,7 @@ public class Strings {
 //			System.out.println("str1 and str3 is referneceing same object Hello using == conditional operators and equals method");
 //		}
 //		else{
-//			System.out.println("tr1 and str3 is not referneceing same objects");
+//			System.out.println("str1 and str3 is not referneceing same objects");
 //		}
 		
 		//The function checks the actual contents comparison of the string, the == operator checks whether the references to the objects are equal
