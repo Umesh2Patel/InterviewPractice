@@ -18,10 +18,11 @@ public static String longestCommonPrefix(String[] strs) {
     String pre = strs[0];
     int i = 1;
     while(i < strs.length){
+    	System.out.println("strs[i].indexOf(pre):  "+ strs[i].indexOf(pre));
         while(strs[i].indexOf(pre) != 0){
-//        	System.out.println("before: "+pre);
+        	System.out.println("before: "+pre);
             pre = pre.substring(0,pre.length()-1);
-//        	System.out.println("after: "+pre);
+        	System.out.println("after: "+pre);
         }
         
         i++;

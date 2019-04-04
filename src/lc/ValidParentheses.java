@@ -8,7 +8,7 @@ public class ValidParentheses {
 The brackets must close in the correct order, "()" and "()[]{}" are all valid but "(]" and "([)]" are not.
  */
 	public static void main(String[] args) {
-		System.out.println(isValid("([{}]){}[]"));
+		System.out.println(isValid("([{}]){}[]("));
 
 	}
 public static boolean isValid(String s) {
