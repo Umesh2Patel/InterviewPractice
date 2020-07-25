@@ -12,10 +12,10 @@ public class ReverseString {
 
 
 		String output = reverseChar(input);
-		System.out.println("output: "+ output);
+		System.out.println("reverseString output: "+ output);
 		
 		String output1 = reverseWord(input);
-		System.out.println("output1: " + output1);
+		System.out.println("reverseWord output: " + output1);
 
 	}
 
@@ -26,10 +26,11 @@ public class ReverseString {
 		String[] words = input.split(" ");
 		System.out.println("words array: " + Arrays.toString(words));
 		
-		for (int i = 0; i < words.length; i++)
+//		for (int i = 0; i < words.length; i++)
+		for (String word : words)
 		{
 			//Taking each word and reversing it
-			String word = words[i];
+//			String word = words[i];
 			String reverseWord = "";
 			
 			
