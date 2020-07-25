@@ -45,17 +45,17 @@ public class ReverseString {
 		return reverseString;
 	}
 
-	private static String reverseChar(String input) {
+	private static String reverseChar(String str) {
 		// TODO Auto-generated method stub
-		String reverse2 = "";
+		String result = "";
 
-		char[] CharArray = input.toCharArray();
-		System.out.println(CharArray);
+		char[] ca = str.toCharArray();
+		System.out.println(ca);
 
-		for (char item : CharArray) {
-			reverse2 = item + reverse2;
+		for (char c : ca) {
+			result = c + result;
 		}
-		return reverse2;
+		return result;
 	}
 
 }
