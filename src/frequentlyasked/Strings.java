@@ -63,6 +63,13 @@ public class Strings {
 		char character = "Umesh".charAt(0); // str1.charAt(0);
 		
 		System.out.println("Umesh has '" + character + "' character at 0 position");
+		System.out.println("Number of character U is : " + (int) character);
+		System.out.println("Number of character a is : " + (int) 'a');
+		System.out.println("Number of character b is : " + (int) 'b');
+		System.out.println("Number of character c is : " + (int) 'c');
+		System.out.println("Number of character d is : " + (int) 'd');
+		System.out.println("Number of character z is : " + (int) 'z');
+		System.out.println("Total a to z: " + ('z'-'a' + 1));
 		
 		
 		//length()
@@ -87,7 +94,15 @@ public class Strings {
 		System.out.println(Integer.toHexString(System.identityHashCode(str1)));
 		System.out.println(str1.hashCode());
 		
+		// Printing order with string and int and order of summation with integers
 		
+		System.out.println("Hello" + 123);
+		System.out.println(123 + "Hello");
+		System.out.println("Hello" + 123 + 45); // 123 + 45 ==> "12345"
+		System.out.println(123 + 45 + "Hello"); // 123 + 45 ==> "168"
+		
+		//Determine if a String is an Integer in Java
+//		System.out.println(StringUtils.isNumeric(String str));
 		
 		
 	}
