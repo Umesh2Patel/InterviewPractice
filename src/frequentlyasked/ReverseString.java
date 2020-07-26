@@ -12,10 +12,10 @@ public class ReverseString {
 
 
 		String output = reverseChar(input);
-		System.out.println("output: "+ output);
+		System.out.println("reverseString output: "+ output);
 		
 		String output1 = reverseWord(input);
-		System.out.println("output1: " + output1);
+		System.out.println("reverseWord output: " + output1);
 
 	}
 
@@ -26,10 +26,11 @@ public class ReverseString {
 		String[] words = input.split(" ");
 		System.out.println("words array: " + Arrays.toString(words));
 		
-		for (int i = 0; i < words.length; i++)
+//		for (int i = 0; i < words.length; i++)
+		for (String word : words)
 		{
 			//Taking each word and reversing it
-			String word = words[i];
+//			String word = words[i];
 			String reverseWord = "";
 			
 			
@@ -44,17 +45,17 @@ public class ReverseString {
 		return reverseString;
 	}
 
-	private static String reverseChar(String input) {
+	private static String reverseChar(String str) {
 		// TODO Auto-generated method stub
-		String reverse2 = "";
+		String result = "";
 
-		char[] CharArray = input.toCharArray();
-		System.out.println(CharArray);
+		char[] ca = str.toCharArray();
+		System.out.println(ca);
 
-		for (char item : CharArray) {
-			reverse2 = item + reverse2;
+		for (char c : ca) {
+			result = c + result;
 		}
-		return reverse2;
+		return result;
 	}
 
 }

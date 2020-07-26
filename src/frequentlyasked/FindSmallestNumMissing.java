@@ -2,6 +2,8 @@ package frequentlyasked;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.TreeSet;
 
 /**
@@ -18,64 +20,59 @@ public class FindSmallestNumMissing {
 	public static void main(String[] args) {
 
 		int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 0, -1, -2 };
+		int[] arr1 = { 2, 3, 4, 5, 6, 7, 8 };
 		
 		
 		
-		int out = firstMissingPositiveNumber(arr);
-		System.out.println(out);
-		FindSmallestNumMissing find = new FindSmallestNumMissing();
-
-		TreeSet<Integer> inOrderTs = find.storeAsTree(arr);
+//		int out = firstMissingPositiveNumber(arr);
+//		System.out.println(out);
+//		FindSmallestNumMissing find = new FindSmallestNumMissing();
 		
-		int output = find.firstMissingPositiveNum(inOrderTs);
+		int output = firstMissingPositiveNumber(arr1);
 		
-		System.out.println("Given unsorted array: " + Arrays.toString(arr));
+		System.out.println("Given unsorted array: " + Arrays.toString(arr1));
 		System.out.println("The smallest positive number missing from the array is: " + output);
-		
-		
-
 	}
 
+	
 	private static int firstMissingPositiveNumber(int[] arr) {
 		Arrays.sort(arr);
+		int x = 1;
 		for(int i=0; i< arr.length; i++){
-			if(arr[i]>0){
-				if(arr[i] != arr[i-1] +1)
-					return arr[i-1] -1;
+			if(arr[i]>0) { 
+				if(arr[i] != x) {
+					return x;
+				}
+				else {
+					x++;
+				}
 			}
-		}
-		
+			
+		}		
 		return arr[arr.length-1]+1;
 	}
 
-	private int firstMissingPositiveNum(TreeSet<Integer> inOrderTs) {
+	private static int firstMissingPositiveNum(int[] arr) {
 		// TODO 
+//		HashSet<Integer> inOrderTs = storeAsTree(arr);
+		Set<Integer> inOrderTs = new HashSet<Integer>();
+		for(int num : arr)
+			inOrderTs.add(num);
+		
 		int size = inOrderTs.size();
 		
-		for(int i = 0; i < size; i++)
-		{
-			if(!(inOrderTs.contains(i+1)))
-			{
-				return i+1;
-			}
-				
-		}
+		for(int i = 0; i < size; i++)		
+			if(!(inOrderTs.contains(i+1))) return i+1;				
 		return size+1;
-
 	}
 
-	private TreeSet<Integer> storeAsTree(int[] arr) {
-		// TODO Storing only positive values in TreeSet in natural order.
-
-		TreeSet<Integer> ts = new TreeSet<Integer>();
-
-		for (int i = 0; i < arr.length; i++) {
-			if (arr[i] > 0) {
-				ts.add(arr[i]); // Storing only positive values in TreeSet in
-								// natural order.
-				System.out.println(ts);
-			}
-		}
-		return ts;
-	}
+//	private static HashSet<Integer> storeAsTree(int[] arr) {
+//		// TODO Storing only positive values in TreeSet in natural order.
+//
+////		TreeSet<Integer> ts = new TreeSet<Integer>();
+//		HashSet<Integer> ts = new HashSet<Integer>();
+//		for (int i = 0; i < arr.length; i++) 
+//			if (arr[i] > 0) ts.add(arr[i]); // Storing only positive values in TreeSet in
+//		return ts;
+//	}
 }

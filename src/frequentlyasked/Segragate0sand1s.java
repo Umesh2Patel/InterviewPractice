@@ -8,18 +8,15 @@ public class Segragate0sand1s {
 	public static void main(String[] args) {
 		// How to sort array of elements arr ={1,0,0,1,1,0} as arr ={0,0,0,1,1,1} with out using 2 for loops and sort method?
 		
-		Segragate0sand1s seg = new Segragate0sand1s();
-		
 		int arr[] = new int[] {1,0,0,1,1,0};
 		int arr_size = arr.length;
-		
-		seg.segregate0and1(arr, arr_size);
+		segregate0and1(arr, arr_size);
 		
 		System.out.println("Array after segragation is " + Arrays.toString(arr));
 
 	}
 
-	private void segregate0and1(int[] arr, int size) {
+	private static void segregate0and1(int[] arr, int size) {
 		// Function to put all 0s on left and all 1s on right
 		
 		//Initialize left and right indexes
